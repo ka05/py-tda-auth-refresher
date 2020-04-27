@@ -1,0 +1,8 @@
+.env
+.idea/*
+
+# Ignore cache
+__pycache__/*
+auth/__pycache__/*
+web/__pycache__/*
+tests/__pycache__/*
