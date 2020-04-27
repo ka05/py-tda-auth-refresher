@@ -34,7 +34,7 @@ and discovered it was using `webbrowser` to launch a browser to facilitate the a
 After more digging I found this lib, [timkpaine/tdameritrade](https://github.com/timkpaine/tdameritrade), 
 which actually implemented a selenium web driver to automate the TDA Auth form. 
 
-[See location code](https://github.com/timkpaine/tdameritrade/blob/master/tdameritrade/auth/__init__.py)
+[See location in code](https://github.com/timkpaine/tdameritrade/blob/master/tdameritrade/auth/__init__.py)
 
 Awesome, exactly what I was looking for! 
 
@@ -65,6 +65,8 @@ $ pip install -r requirements.txt
 
 ### Usage
 
+Ensure you have filled out the env var values in `.env`
+
 ```python
 # For Silent mode ( Chrome in headless mode )
 TDATokenRefresher.get_oauth_token()
@@ -91,10 +93,12 @@ TDATokenRefresher.get_oauth_token(use_headless_web_driver=False)
 }
 ```
 
-The responsibility falls on the Client of this API to securely store the tokens.
+NOTICE: The responsibility falls on the user to securely store these tokens.
 
 ### Resources
 
+https://github.com/timkpaine/tdameritrade
+
 https://github.com/addisonlynch/pyTD
 
-https://github.com/timkpaine/tdameritrade
+Shout out to @timkpaine and @addisonlynch. Thank you!
