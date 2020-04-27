@@ -1,3 +1,4 @@
 python-dotenv~=0.13.0
 requests_oauthlib
 selenium
+webdriver_manager
